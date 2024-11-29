@@ -15,7 +15,7 @@ class MainViewModel {
     if (isLogined) {
       user = await UserApi.instance.me();
       // 네비게이션 처리
-      Navigator.pushNamed(context, '/mypage');
+      Navigator.pushNamed(context, '/home');
     } else {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(

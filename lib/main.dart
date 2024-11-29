@@ -1,3 +1,4 @@
+import 'package:comaapp/screen/homescreen.dart';
 import 'package:comaapp/screen/login_screen.dart';
 import 'package:comaapp/screen/main_screen.dart';
 import 'package:comaapp/screen/mypage_screen.dart';
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
         '/login': (context) => LoginScreen(),
         '/main' : (context) => MainScreen(),
         '/mypage' : (context) => MypageScreen(),
+        '/home' : (context) => Homescreen(),
       },
       home: Scaffold(
         appBar: AppBar(
