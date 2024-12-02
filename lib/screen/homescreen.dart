@@ -1,29 +1,14 @@
+import 'package:comaapp/screen/mypage_screen.dart';
 import 'package:flutter/material.dart';
 
-class Homescreen extends StatelessWidget {
+class Homescreen extends StatefulWidget {
   const Homescreen({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Navigation Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
-        useMaterial3: true,
-      ),
-      home: const MyHomePage(),
-    );
-  }
+  State<Homescreen> createState() => _HomescreenState();
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key});
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
+class _HomescreenState extends State<Homescreen> {
   int _selectedIndex = 0;
 
   // 네 개의 화면을 각각 다른 위젯으로 정의합니다.
@@ -31,7 +16,7 @@ class _MyHomePageState extends State<MyHomePage> {
     Center(child: Text('Home Page', style: TextStyle(fontSize: 24))),
     Center(child: Text('Search Page', style: TextStyle(fontSize: 24))),
     Center(child: Text('Notifications Page', style: TextStyle(fontSize: 24))),
-    Center(child: Text('Profile Page', style: TextStyle(fontSize: 24))),
+    MypageScreen(),
   ];
 
   // 네비게이션 아이템이 선택될 때 호출됩니다.
@@ -44,9 +29,6 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Flutter Navigation Demo'),
-      ),
       body: _pages[_selectedIndex], // 선택된 페이지를 표시합니다.
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
