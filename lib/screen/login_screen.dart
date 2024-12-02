@@ -1,5 +1,5 @@
-import 'package:comaapp/kakao_login.dart';
-import 'package:comaapp/main_view_model.dart';
+import 'package:comaapp/model/kakao_login.dart';
+import 'package:comaapp/viewModel/main_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:comaapp/main.dart';
 
