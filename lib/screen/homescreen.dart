@@ -1,3 +1,4 @@
+import 'package:comaapp/screen/main_screen.dart';
 import 'package:comaapp/screen/mypage_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -13,9 +14,9 @@ class _HomescreenState extends State<Homescreen> {
 
   // 네 개의 화면을 각각 다른 위젯으로 정의합니다.
   static const List<Widget> _pages = <Widget>[
-    Center(child: Text('Home Page', style: TextStyle(fontSize: 24))),
-    Center(child: Text('Search Page', style: TextStyle(fontSize: 24))),
-    Center(child: Text('Notifications Page', style: TextStyle(fontSize: 24))),
+    MainScreen(),
+    Center(child: Text('동아리방', style: TextStyle(fontSize: 24))),
+    Center(child: Text('코뮤니티', style: TextStyle(fontSize: 24))),
     MypageScreen(),
   ];
 
@@ -34,24 +35,25 @@ class _HomescreenState extends State<Homescreen> {
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
-            label: 'Home',
+            label: '홈',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.search),
-            label: 'Search',
+            icon: Icon(Icons.table_bar_sharp),
+            label: '동아리방',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.notifications),
-            label: 'Notifications',
+            icon: Icon(Icons.hub_sharp),
+            label: '코뮤니티',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
-            label: 'Profile',
+            label: '내 정보',
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.blue,
+        selectedItemColor: Color(0xFFFF8C32),
         unselectedItemColor: Colors.grey,
+        type: BottomNavigationBarType.fixed,
         onTap: _onItemTapped,
       ),
     );
