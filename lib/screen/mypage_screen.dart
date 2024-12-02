@@ -1,3 +1,4 @@
+import 'package:comaapp/const/color.dart';
 import 'package:comaapp/screen/login_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -15,7 +16,6 @@ class _MypageScreenState extends State<MypageScreen> {
       appBar: AppBar(
         title: Text("마이페이지"),
         centerTitle: false,
-        backgroundColor: Color(0xFFFF8C32),  //코마 메인 색상
         elevation: 0,
       ),
       body: Padding(

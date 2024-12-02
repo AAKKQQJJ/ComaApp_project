@@ -94,8 +94,10 @@ class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text("홈"),
+      ),
       floatingActionButton: FloatingActionButton(
-        backgroundColor: primaryColor,
         onPressed: () {
           showModalBottomSheet(
             context: context,

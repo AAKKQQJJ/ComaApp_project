@@ -1,3 +1,4 @@
+import 'package:comaapp/const/color.dart';
 import 'package:comaapp/model/kakao_login.dart';
 import 'package:comaapp/viewModel/main_view_model.dart';
 import 'package:flutter/material.dart';
