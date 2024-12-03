@@ -49,6 +49,7 @@ dev_dependencies:
   flutter_lints: ^3.0.0
   table_calendar: ^3.1.0
   intl: ^0.19.0
+  flutter_native_splash: ^2.2.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -60,6 +61,22 @@ flutter:
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
+
+  fonts:
+    - family: NotoSans
+      fonts:
+        - asset: lib/asset/font/NotoSansKR-Black.otf
+          weight: 900
+        - asset: lib/asset/font/NotoSansKR-Bold.otf
+          weight: 700
+        - asset: lib/asset/font/NotoSansKR-Light.otf
+          weight: 500
+        - asset: lib/asset/font/NotoSansKR-Medium.otf
+          weight: 400
+        - asset: lib/asset/font/NotoSansKR-Regular.otf
+          weight: 300
+        - asset: lib/asset/font/NotoSansKR-Thin.otf
+          weight: 100
 
   assets:
     - images/kakaologin.png

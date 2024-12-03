@@ -17,14 +17,29 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: primaryColor,
       body: SafeArea(
         child: Column(
           children: [
             SizedBox(
-              height: 100,
+              height: 200,
             ),
-            Image.asset('images/yadon.jpg'),
+            Text(
+              "Coma",
+              style: TextStyle(
+                fontWeight: FontWeight.w700,
+                fontSize: 100,
+                color: Colors.white,
+                fontFamily: 'NotoSans',
+                  letterSpacing: -5,
+                  shadows: [
+                    Shadow(
+                        color: Colors.black.withOpacity(0.3),
+                        offset: const Offset(3, 3),
+                        blurRadius: 15),
+                  ]
+              ),
+            ),
             SizedBox(height: 200),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
